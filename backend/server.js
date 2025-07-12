@@ -23,6 +23,10 @@ app.use(cors());
 app.use(express.json());
 app.use("/notes", noteRoutes);
 
+app.get("/", (req, res) => {
+  res.send("Backend is up and running 🚀");
+});
+
 
 const startServer = async () => {
   try {
